@@ -2924,6 +2924,7 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$c1db.prelude(module);
 
 try {
+//parcel is doing this for us -> known as HMR(Hot module reload)
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
@@ -2934,13 +2935,15 @@ var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 const heading1 = /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
     id: "heading"
 }, "Hello world from React");
-//  console.log(heading)its a Object so React.createElement is a Object
-// Craete a Root where we do all dom Manupulation, 
-// root is the place where all the react code will run
-// Now we have to put the h1 into DOM
 const root = (0, _reactDomDefault.default).createRoot(document.getElementById("root"));
-// render will take this object make it h1 tag which broswer understand and put it in root
-root.render(heading1) /*Lot of other packeges we need here to made aproduction ready app in React
+root.render(heading1) //  console.log(heading)its a Object so React.createElement is a Object
+ // Craete a Root where we do all dom Manupulation, 
+ // root is the place where all the react code will run
+ // Now we have to put the h1 into DOM
+ // const root = ReactDOM.createRoot(document.getElementById("root"));
+ // render will take this object make it h1 tag which broswer understand and put it in root
+ // root.render(heading1)
+ /*Lot of other packeges we need here to made aproduction ready app in React
 npm-does not have full form . it manages packages . Standard repo for all the packages all packages are hoisted over here.
 terminal->npm init -> provide details->package.json
 so package.json is configuration for npm
