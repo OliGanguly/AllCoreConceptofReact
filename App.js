@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ReactDOM } from 'react-dom';
+import ReactDOM from "react-dom" 
 // Just create a h1 element
 //{} where you give attributes to your tag
 const heading1 = React.createElement("h1",
